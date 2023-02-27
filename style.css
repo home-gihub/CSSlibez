@@ -1,44 +1,30 @@
-div.embed {
-    outline-color: red;
-    border-left: 5px;
-    padding: 10px;
-    background-color: rgb(48, 48, 48);
-    width: fit-content;
-    height: fit-content;
-}
+:root {--accent: rgb(255, 59, 163)}
+p {font-family: Arial, Helvetica, sans-serif;}
 
-div.embed + h1 {
-    color: white;
-    font-weight: bold
-}
+body{background-color: black ;}
 
-div.embed + h1 + p {
-    color: rgb(121, 121, 121);
-    font-weight: normal;
-}
+p{color: white;}
+h1{color: white;}
+h2{color: white;}
+h3{color: white;}
+h4{color: white;}
+p[theme="gradient"] {backgrounpd: #ff0000;background: -webkit-linear-gradient(to right, #ff0000, #9932cc);background: linear-gradient(to right, #ff0000, #9932cc);-webkit-background-clip: text;background-clip: text;color: transparent;}
+h1[theme="gradient"] {backgrounpd: #ff0000;background: -webkit-linear-gradient(to right, #ff0000, #9932cc);background: linear-gradient(to right, #ff0000, #9932cc);-webkit-background-clip: text;background-clip: text;color: transparent;}
+h2[theme="gradient"] {backgrounpd: #ff0000;background: -webkit-linear-gradient(to right, #ff0000, #9932cc);background: linear-gradient(to right, #ff0000, #9932cc);-webkit-background-clip: text;background-clip: text;color: transparent;}
+h3[theme="gradient"] {backgrounpd: #ff0000;background: -webkit-linear-gradient(to right, #ff0000, #9932cc);background: linear-gradient(to right, #ff0000, #9932cc);-webkit-background-clip: text;background-clip: text;color: transparent;}
+h4[theme="gradient"] {backgrounpd: #ff0000;background: -webkit-linear-gradient(to right, #ff0000, #9932cc);background: linear-gradient(to right, #ff0000, #9932cc);-webkit-background-clip: text;background-clip: text;color: transparent;}
 
-div.embed + h1 + p + h1 {
-    color: white;
-    font-weight: bold
-}
+div.section {width: 100%;height: fit-content;padding: 10px;}
+div.section[theme="gradient"] {background: rgb(166,0,145);background: linear-gradient(135deg, rgba(166,0,145,1) 0%, rgba(255,0,0,1) 100%);}
+div.section[theme="black"] {background-color: black;}
+div.section[theme="white"] {background-color: white;}
+div.section[theme="white"] > p {color: black;}
+div.section[theme="black"] > p {color: white;}
+div.section[theme="gradient"] > p {color: white;}
 
-div.embed + h1 + p + h1 + p {
-    color: rgb(121, 121, 121);
-    font-weight: normal;
-}
-
-div.embed + h1 + p + h1 + p + h1 {
-    color: white;
-    font-weight: bold
-}
-
-div.embed + h1 + p + h1 + p + h1 + p {
-    color: rgb(121, 121, 121);
-    font-weight: normal;
-}
-
-div.embed + h1 + p + h1 + p + h1 + p + p {
-    color: rgb(121, 121, 121);
-    font-weight: normal;
-}
+div.window[theme="black"] {background-color: rgb(41, 41, 41);border-radius: 10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+div.window[theme="white"] {background-color: rgb(255, 255, 255);border-radius: 10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+div.window > div.controls > a.button[theme="accent"] > div {border-radius: 5px;background-color: var(--accent);}
+div.window > div.controls > a.button > div > p {color: white;}
+div.window {padding: 10px;}
 
