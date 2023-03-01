@@ -45,10 +45,14 @@ div.window[theme="white"] > h2 {color: black;}
 div.window[theme="white"] > h3 {color: black;}
 div.window[theme="white"] > h4 {color: black;}
 div.window[theme="white"] > p {color: black;}
-div.window > div.controls > a.button[theme="blue"] > div { border-radius: 5px;background-color: cornflowerblue;padding-left: 10px;width: fit-content;height: fit-content;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;}
-div.window > div.controls > a.button[theme="green"] > div { border-radius: 5px;background-color: rgb(100, 237, 100);padding-left: 10px;width: fit-content;height: fit-content;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;}
-div.window > div.controls > a.button > div > p {color: white;border: 0%;}
-div.window > div.controls > a.button {text-decoration: none;}
 div.window {padding: 10px;width: fit-content;height: fit-content;}
 div.window > div.controls {width: 100%;height: fit-content;display: flex;}
-
+a.button[theme="outline"] > div { border-radius: 5px;padding-left: 10px;width: fit-content;height: fit-content;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;border: 5px;background: none;}
+a.button[theme="outline"] > div > p { color: white; }
+a:hover.button[colour="green" theme="outline"] > div > p { color: ;}
+a:hover.button[theme="outline"] > div { border-radius: 5px;padding-left: 10px;width: fit-content;height: fit-content;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;outline: 0px;}
+a.button[theme="fill"] > div { border-radius: 5px;padding-left: 10px;width: fit-content;height: fit-content;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;outline: 0px;}
+a.button[colour="blue"] > div { background-color: cornflowerblue;border-color: cornflowerblue;}
+a.button[colour="green"] > div { background-color: rgb(100, 237, 100);border-color: rgb(100, 237, 100);}
+a.button > div > p {color: white;border: 0%;}
+a.button {text-decoration: none;}
