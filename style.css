@@ -51,7 +51,7 @@ a.button[theme="outline"] > div { border-radius: 5px;padding-left: 10px;width: f
 a.button[theme="outline"] > div > p { color: white; }
 a:hover.button[colour="green"][theme="outline"] > div > p { color: rgb(100, 237, 100);}
 a:hover.button[colour="blue"][theme="outline"] > div > p { color: cornflowerblue}
-a:hover.button[theme="outline"] > div { border-radius: 5px;padding-left: 10px;width: fit-content;height: fit-content;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;outline: 0px;background: none;}
+a:hover.button[theme="outline"] > div { border-radius: 5px;padding-left: 10px;width: fit-content;height: fit-content;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;outline: 0px;background: transparent;}
 a.button[theme="fill"] > div { border-radius: 5px;padding-left: 10px;width: fit-content;height: fit-content;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;outline: 0px;}
 a.button[colour="blue"] > div { background-color: cornflowerblue;border-color: cornflowerblue;}
 a.button[colour="green"] > div { background-color: rgb(100, 237, 100);border-color: rgb(100, 237, 100);}
