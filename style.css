@@ -8,49 +8,37 @@ h1{color: white;font-family: Arial, Helvetica, sans-serif;}
 h2{color: white;font-family: Arial, Helvetica, sans-serif;}
 h3{color: white;font-family: Arial, Helvetica, sans-serif;}
 h4{color: white;font-family: Arial, Helvetica, sans-serif;}
-div.section[theme="white"] > p{color: black;font-family: Arial, Helvetica, sans-serif;}
-div.section[theme="white"] > h1{color: black;font-family: Arial, Helvetica, sans-serif;}
-div.section[theme="white"] > h2{color: black;font-family: Arial, Helvetica, sans-serif;}
-div.section[theme="white"] > h3{color: black;font-family: Arial, Helvetica, sans-serif;}
-div.section[theme="white"] > h4{color: black;font-family: Arial, Helvetica, sans-serif;}
-div.section[theme="white"] > p[theme="gradient"] {backgrounpd: #ff0000;background: -webkit-linear-gradient(to right, #ff0000, #9932cc);background: linear-gradient(to right, #ff0000, #9932cc);-webkit-background-clip: text;background-clip: text;color: transparent;}
-div.section[theme="white"] > h1[theme="gradient"] {backgrounpd: #ff0000;background: -webkit-linear-gradient(to right, #ff0000, #9932cc);background: linear-gradient(to right, #ff0000, #9932cc);-webkit-background-clip: text;background-clip: text;color: transparent;}
-div.section[theme="white"] > h2[theme="gradient"] {backgrounpd: #ff0000;background: -webkit-linear-gradient(to right, #ff0000, #9932cc);background: linear-gradient(to right, #ff0000, #9932cc);-webkit-background-clip: text;background-clip: text;color: transparent;}
-div.section[theme="white"] > h3[theme="gradient"] {backgrounpd: #ff0000;background: -webkit-linear-gradient(to right, #ff0000, #9932cc);background: linear-gradient(to right, #ff0000, #9932cc);-webkit-background-clip: text;background-clip: text;color: transparent;}
-div.section[theme="white"] > h4[theme="gradient"] {backgrounpd: #ff0000;background: -webkit-linear-gradient(to right, #ff0000, #9932cc);background: linear-gradient(to right, #ff0000, #9932cc);-webkit-background-clip: text;background-clip: text;color: transparent;}
-p[theme="gradient"] {backgrounpd: #ff0000;background: -webkit-linear-gradient(to right, #ff0000, #9932cc);background: linear-gradient(to right, #ff0000, #9932cc);-webkit-background-clip: text;background-clip: text;color: transparent;}
-h1[theme="gradient"] {backgrounpd: #ff0000;background: -webkit-linear-gradient(to right, #ff0000, #9932cc);background: linear-gradient(to right, #ff0000, #9932cc);-webkit-background-clip: text;background-clip: text;color: transparent;}
-h2[theme="gradient"] {backgrounpd: #ff0000;background: -webkit-linear-gradient(to right, #ff0000, #9932cc);background: linear-gradient(to right, #ff0000, #9932cc);-webkit-background-clip: text;background-clip: text;color: transparent;}
-h3[theme="gradient"] {backgrounpd: #ff0000;background: -webkit-linear-gradient(to right, #ff0000, #9932cc);background: linear-gradient(to right, #ff0000, #9932cc);-webkit-background-clip: text;background-clip: text;color: transparent;}
-h4[theme="gradient"] {backgrounpd: #ff0000;background: -webkit-linear-gradient(to right, #ff0000, #9932cc);background: linear-gradient(to right, #ff0000, #9932cc);-webkit-background-clip: text;background-clip: text;color: transparent;}
 
-div.section {width: 100%;height: fit-content;padding: 10px;}
-div.section[theme="gradient"] {background: rgb(166,0,145);background: linear-gradient(135deg, rgba(166,0,145,1) 0%, rgba(255,0,0,1) 100%);}
-div.section[theme="black"] {background-color: black;}
-div.section[theme="white"] {background-color: white;}
-div.section[theme="white"] > p {color: black;}
-div.section[theme="black"] > p {color: white;}
-div.section[theme="gradient"] > p {color: white;}
+[effect="shiny"] {
+    color: white;
+    position: relative;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  [effect="shiny"]::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--y, 0) * 1px - 50px);
+    left: calc(var(--x, 0) * 1px - 50px);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(white, #3984ff00 80%);
+  
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  [effect="shiny"]:hover::after {
+    opacity: 0.4;
+  }
 
-div.window[theme="dashed"] {border: 10px;border-color: white;border-radius: 5px;}
-div.window[theme="black"] {background-color: rgb(41, 41, 41);border-radius: 10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-div.window[theme="white"] {background-color: rgb(255, 255, 255);border-radius: 10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-div.window[theme="black"] > h1 {color: white;}
-div.window[theme="black"] > h2 {color: white;}
-div.window[theme="black"] > h3 {color: white;}
-div.window[theme="black"] > h4 {color: white;}
-div.window[theme="black"] > p {color: white;}
-div.window[theme="white"] > h1 {color: black;}
-div.window[theme="white"] > h2 {color: black;}
-div.window[theme="white"] > h3 {color: black;}
-div.window[theme="white"] > h4 {color: black;}
-div.window[theme="white"] > p {color: black;}
-div.window {padding: 10px;width: fit-content;height: fit-content;}
-div.window > div.controls {width: 100%;height: fit-content;display: flex;}
-a.button[theme="outline"] > div { border-radius: 5px;padding-left: 10px;width: fit-content;height: fit-content;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;border: 5px;}
-a.button[colour="green"][theme="outline"] > div > p { color: rgb(100, 237, 100);border-color: rgb(100, 237, 100);}
-a.button[colour="blue"][theme="outline"] > div > p { color: cornflowerblue;border-color: cornflowerblue;}
-a:hover.button[theme="outline"] > div { border-radius: 5px;padding-left: 10px;width: fit-content;height: fit-content;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;outline: 0px;}
-a.button[theme="fill"] > div { border-radius: 5px;padding-left: 10px;width: fit-content;height: fit-content;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;outline: 0px;}
-a.button > div > p {color: white;border: 0%;}
-a.button {text-decoration: none;}
+  .transparent {
+    outline-color: rgba(255, 255, 255, 0.466);
+    outline: 5px;
+    background-color: rgba(255, 255, 255, 0.267);
+  }
