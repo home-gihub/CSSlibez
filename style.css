@@ -9,7 +9,7 @@ h2{color: white;font-family: Arial, Helvetica, sans-serif;}
 h3{color: white;font-family: Arial, Helvetica, sans-serif;}
 h4{color: white;font-family: Arial, Helvetica, sans-serif;}
 
-[effect="shiny"] {
+.shiny-container {
     color: white;
     position: relative;
     border: none;
@@ -18,9 +18,12 @@ h4{color: white;font-family: Arial, Helvetica, sans-serif;}
     font-weight: bold;
     cursor: pointer;
     overflow: hidden;
+    outline-color: rgba(255, 255, 255, 0.466);
+    outline: 5px;
+    background-color: rgba(255, 255, 255, 0.267);
   }
   
-  [effect="shiny"]::after {
+  .shiny-container::after {
     content: "";
     position: absolute;
     top: calc(var(--y, 0) * 1px - 50px);
@@ -33,12 +36,6 @@ h4{color: white;font-family: Arial, Helvetica, sans-serif;}
     transition: opacity 0.2s;
   }
   
-  [effect="shiny"]:hover::after {
+  .shiny-container:hover::after {
     opacity: 0.4;
-  }
-
-  .transparent {
-    outline-color: rgba(255, 255, 255, 0.466);
-    outline: 5px;
-    background-color: rgba(255, 255, 255, 0.267);
   }
