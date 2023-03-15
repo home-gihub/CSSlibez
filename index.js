@@ -1,4 +1,4 @@
-const button = document.querySelector("effect="shiny"");
+const button = document.querySelector(".shiny-container");
 
 const readout = document.querySelector("p");
 
