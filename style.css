@@ -1,50 +1,149 @@
-
-p {font-family: Arial, Helvetica, sans-serif;}
-body{background-color: black ;}
-br{padding: 0%;margin: 0%;}
-
-p{color: white;font-family: Arial, Helvetica, sans-serif;}
-h1{color: white;font-family: Arial, Helvetica, sans-serif;}
-h2{color: white;font-family: Arial, Helvetica, sans-serif;}
-h3{color: white;font-family: Arial, Helvetica, sans-serif;}
-h4{color: white;font-family: Arial, Helvetica, sans-serif;}
-
-.transparent-container {
-    outline-color: rgba(255, 255, 255, 0.466);
-    outline: 5px;
-    background-color: rgba(255, 255, 255, 0.267);
-  }
-
-.indent {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    background-color: rgb(78, 78, 78);
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #d0d5de;
 }
 
-.float {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    background-color: rgb(78, 78, 78);
+body > div.topbar {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 3em;
+    background: rgb(69,93,130);
+    background: -moz-linear-gradient(0deg, rgba(69,93,130,1) 0%, rgba(170,185,208,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(69,93,130,1) 0%, rgba(170,185,208,1) 100%);
+    background: linear-gradient(0deg, rgba(69,93,130,1) 0%, rgba(170,185,208,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#455d82",endColorstr="#aab9d0",GradientType=1);
 }
 
-  .transparent-containet {
-    background-color: rgba(255, 255, 255, 0.267);
-  }
-
-.gradient-separator {
-    background: rgb(2,0,36);
-    background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgba(103,125,183,1) 50%, rgba(0,212,255,0) 100%);
-    width: 100%;
-    height: fit-content;
+div.main {
+    position: absolute;
+    top: 3em;
+    padding: 0.5em;
+    width: calc(100vw - 1em);
+    align-content: center;
+    background-color: #d0d5de;
 }
 
-a {
-    text-decoration: none;
-    color: #9CA3DB;
+div.main > fieldset {
+    align-self: center;
+    width: auto;
+    padding: 0;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: rgb(153, 153, 153);
+    border-right-color: rgb(153, 153, 153);
+    border-bottom-color: rgb(153, 153, 153);
+    border-left-color: rgb(153, 153, 153);
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    background-color: white;
+    margin-bottom: 1em;
 }
 
-a.button {
-    padding: 10px;
+div.main > label {
+    color: #586176;
+    text-shadow: white 1px 1px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+div.main > fieldset > div > p {
+    color: black;
+}
+
+div.main > fieldset > a > div > p {
+    color: black;
+}
+
+div.main > fieldset > button > div > p {
+    color: black;
+    float: inline-start;
+    text-align: left;
+    font-weight: bold;
+    font-size: medium;
+}
+
+div.main > fieldset > button > div {
+    padding: 0.5em;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(153, 153, 153);
+}
+
+div.main > fieldset > a > div {
+    padding: 0.5em;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(153, 153, 153);
+}
+
+div.main > fieldset > a {
+    border: none;
+    color: rgba(255, 255, 255, 0);
+}
+
+div.main > fieldset > button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    display: contents;
+}
+
+div.main > fieldset > div {
+    padding: 0.5em;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(153, 153, 153);
+}
+
+body > div.topbar > p {
+    margin: 0;
     color: white;
-    outline-color: rgba(255, 255, 255, 0.466);
-    outline: 5px;
-    background-color: rgba(255, 255, 255, 0.267);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    left: 50vw;
+}
+
+p {
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+body > div.topbar > a > div > p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+body > div.topbar > a > div {
+    border-radius: 0.2em;
+    box-shadow: 0px 20px 7px -20px rgba(0,0,0,1) inset,
+0px -20px 8px -20px rgba(255,255,255,1) inset;
+    float: left;
+    margin: 0;
+    margin-left: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+    background: rgb(54,78,122);
+    background: -moz-linear-gradient(0deg, rgba(54,78,122,1) 0%, rgba(131,154,185,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(54,78,122,1) 0%, rgba(131,154,185,1) 100%);
+    background: linear-gradient(0deg, rgba(54,78,122,1) 0%, rgba(131,154,185,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#364e7a",endColorstr="#839ab9",GradientType=1);
 }
