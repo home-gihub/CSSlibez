@@ -1,2 +1,2 @@
 # CSSlibez
-A easy to use CSS style sheet
+easy ios 6 stylesheet
