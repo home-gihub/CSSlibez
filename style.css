@@ -65,6 +65,7 @@ div.main > label {
 
 div.main > fieldset > div > p {
     color: black;
+    float: center;
 }
 
 div.main > fieldset > a > div > p {
