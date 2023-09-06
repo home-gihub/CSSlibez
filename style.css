@@ -19,7 +19,7 @@ body > div.topbar {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#455d82",endColorstr="#aab9d0",GradientType=1);
 }
 
-div.main {
+div.FormView {
     position: absolute;
     top: 3em;
     padding: 0.5em;
@@ -28,7 +28,7 @@ div.main {
     background-color: #d0d5de;
 }
 
-div.main > fieldset {
+div.FormView > fieldset {
     align-self: center;
     width: auto;
     padding: 0;
@@ -57,7 +57,7 @@ div.main > fieldset {
     margin-bottom: 1em;
 }
 
-div.main > label {
+div.FormView > label {
     color: #586176;
     text-shadow: white 1px 1px 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -65,65 +65,55 @@ div.main > label {
     font-size: medium;
 }
 
-div.main > fieldset > div > p {
-    color: black;
+div.FormView > fieldset > div > p {
     font-weight: lighter;
     align-self: center;
-}
-
-div.main > fieldset > a > div > div > p {
     color: black;
 }
 
-div.main > fieldset > button > div > p {
-    color: black;
+div.FormView > fieldset > div > button > p {
     float: inline-start;
     text-align: left;
     font-weight: bold;
     font-size: medium;
+    color: black;
 }
 
-div.main > fieldset > button > div {
-    overflow: hidden;
+div.FormView > fieldset > div:last-child {
+    border-bottom: 0;
+}
+
+div.FormView > fieldset > div {
     padding: 0.5em;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(153, 153, 153);
 }
 
-div.bottomitem {
-    border-bottom: none;
-}
-
-div.main > fieldset > a > div {
-    padding: 0.5em;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(153, 153, 153);
-}
-
-div.main > fieldset > a > div > div {
+div.FormView > fieldset > div > a > div {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAANCAYAAACQN/8FAAAAUElEQVQoz2NggIKysrI6EGbAB6CK/kNxHT6FLUgKQbiaaorb0RRXUK4YKCENxG+RFD4BYiFsim6jKVKhnSIWID6CVxGSYhWoAtyK0BTjVAQA7b9/uRuNojcAAAAASUVORK5CYII=);
     background-position: right center;
     background-repeat: no-repeat;
     background-size: 10px 13px;
+    text-align: left;
 }
 
-div.main > fieldset > a {
+div.FormView > fieldset > div > a > div > p {
+    color: black;
+}
+
+div.FormView > fieldset > div > a {
     border: none;
     color: rgba(255, 255, 255, 0);
 }
 
-div.main > fieldset > button {
+div.FormView > fieldset > div > button {
     border: none;
     background-color: rgba(255, 255, 255, 0);
     display: contents;
-    webkit-appearance: none;
+    -webkit-appearance: none;
     -webkit-border-radius:0; 
     border-radius:0;
 }
 
-div.main > fieldset > div {
+div.FormView > fieldset > div {
     padding: 0.5em;
     border-bottom-width: 1px;
     border-bottom-style: solid;
@@ -166,4 +156,49 @@ body > div.topbar > a > div {
     background: -webkit-linear-gradient(0deg, rgba(54,78,122,1) 0%, rgba(131,154,185,1) 100%);
     background: linear-gradient(0deg, rgba(54,78,122,1) 0%, rgba(131,154,185,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#364e7a",endColorstr="#839ab9",GradientType=1);
+}
+
+div.AppBar {
+    background: rgb(0,0,0);
+background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(44,44,44,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(44,44,44,1) 100%);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(44,44,44,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#2c2c2c",GradientType=1);
+position: fixed;
+width: 100vw;
+height: 3em;
+top: calc(100vh - 3em);
+}
+
+.baritem {
+    display: inline;
+    width: 3em;
+    height: 3em;
+    justify-content: unset;
+    padding: 0.4em;
+}
+
+.baritem > div {
+    display: flex;
+    align-content: end;
+}
+
+div.AppBar > div {
+    justify-content: center;
+    height: 3em;
+    display: flex;
+}
+
+.baritem.selected {
+background: -moz-linear-gradient(0deg, rgba(38,38,38,1) 0%, rgba(75,75,75,1) 54%);
+background: -webkit-linear-gradient(0deg, rgba(38,38,38,1) 0%, rgba(75,75,75,1) 54%);
+background: linear-gradient(0deg, rgba(38,38,38,1) 0%, rgba(75,75,75,1) 54%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#262626",endColorstr="#4b4b4b",GradientType=1);
+}
+
+.baritem > div > p{
+    color: white;
+    text-align: center;
+    font-size: small;
+    font-weight: lighter;
 }
